@@ -1,6 +1,6 @@
 package mappe.del1.hospital;
 
-public class Person
+public abstract class Person
 {
     private String firstName;
     private String lastName;
@@ -9,9 +9,9 @@ public class Person
 
  public Person(String firstName, String lastName, String socialSecurityNumber)
  {
-     this.firstName = firstName;
-     this.lastName = lastName;
-     this. socialSecurityNumber = socialSecurityNumber;
+     this.firstName = "";
+     this.lastName = "";
+     this. socialSecurityNumber = "";
  }
 
 
@@ -19,7 +19,7 @@ public class Person
     {
         if(null == firstName)
         {
-            this.firstName = "Inavlid first name.. try again";
+            this.firstName = "Invalid first name.. try again";
         }
         else
             {
@@ -35,7 +35,8 @@ public class Person
         }
     }
 
-    public void setSocialSecurityNumber(String socialSecurityNumber) {
+    public void setSocialSecurityNumber(String socialSecurityNumber)
+    {
         if(null == socialSecurityNumber)
         {
             this.socialSecurityNumber = "Invalid person number.. try again";
@@ -48,7 +49,7 @@ public class Person
             }
             else
             {
-                this.socialSecurityNumber = firstName;
+                this.socialSecurityNumber = socialSecurityNumber;
             }
 
         }
@@ -58,7 +59,7 @@ public class Person
     {
         if(null == lastName)
         {
-            this.lastName = "Inavlid last name.. try again";
+            this.lastName = "Invalid last name.. try again";
         }
         else
         {
@@ -105,7 +106,9 @@ public class Person
      */
 public String toString()
 {
+
  return firstName + "\n" + lastName + "\n" + socialSecurityNumber;
+
 }
 
 

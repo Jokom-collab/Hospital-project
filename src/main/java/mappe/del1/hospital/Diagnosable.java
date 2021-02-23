@@ -1,6 +1,11 @@
 package mappe.del1.hospital;
 
-public class Diagnosable
+interface Diagnosable
 {
+
+
+public void setDiagnosis(String diagnose);
+
+
 
 }
